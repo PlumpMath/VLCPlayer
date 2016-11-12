@@ -32,12 +32,16 @@
 			this.PanelMain2 = new System.Windows.Forms.Panel();
 			this.VLCMain2 = new Vlc.DotNet.Forms.VlcControl();
 			this.PanelMain1 = new System.Windows.Forms.Panel();
+			this.TrackBarMain1Vol = new System.Windows.Forms.TrackBar();
 			this.VLCMain1 = new Vlc.DotNet.Forms.VlcControl();
+			this.TrackBarMain2Vol = new System.Windows.Forms.TrackBar();
 			this.TableLayoutPanelMain.SuspendLayout();
 			this.PanelMain2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.VLCMain2)).BeginInit();
 			this.PanelMain1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.TrackBarMain1Vol)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.VLCMain1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.TrackBarMain2Vol)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// TableLayoutPanelMain
@@ -60,6 +64,7 @@
 			// 
 			this.PanelMain2.AutoScroll = true;
 			this.PanelMain2.BackColor = System.Drawing.SystemColors.Control;
+			this.PanelMain2.Controls.Add(this.TrackBarMain2Vol);
 			this.PanelMain2.Controls.Add(this.VLCMain2);
 			this.PanelMain2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.PanelMain2.Location = new System.Drawing.Point(3, 183);
@@ -85,12 +90,26 @@
 			// PanelMain1
 			// 
 			this.PanelMain1.BackColor = System.Drawing.SystemColors.Control;
+			this.PanelMain1.Controls.Add(this.TrackBarMain1Vol);
 			this.PanelMain1.Controls.Add(this.VLCMain1);
 			this.PanelMain1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.PanelMain1.Location = new System.Drawing.Point(3, 3);
 			this.PanelMain1.Name = "PanelMain1";
 			this.PanelMain1.Size = new System.Drawing.Size(286, 174);
 			this.PanelMain1.TabIndex = 2;
+			// 
+			// TrackBarMain1Vol
+			// 
+			this.TrackBarMain1Vol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.TrackBarMain1Vol.AutoSize = false;
+			this.TrackBarMain1Vol.LargeChange = 10;
+			this.TrackBarMain1Vol.Location = new System.Drawing.Point(5, 150);
+			this.TrackBarMain1Vol.Maximum = 100;
+			this.TrackBarMain1Vol.Name = "TrackBarMain1Vol";
+			this.TrackBarMain1Vol.Size = new System.Drawing.Size(104, 20);
+			this.TrackBarMain1Vol.TabIndex = 2;
+			this.TrackBarMain1Vol.TickStyle = System.Windows.Forms.TickStyle.None;
+			this.TrackBarMain1Vol.ValueChanged += new System.EventHandler(this.TrackBarMain1Vol_ValueChanged);
 			// 
 			// VLCMain1
 			// 
@@ -107,6 +126,19 @@
 			this.VLCMain1.VlcMediaplayerOptions = null;
 			this.VLCMain1.VlcLibDirectoryNeeded += new System.EventHandler<Vlc.DotNet.Forms.VlcLibDirectoryNeededEventArgs>(this.VLCMain_VlcLibDirectoryNeeded);
 			// 
+			// TrackBarMain2Vol
+			// 
+			this.TrackBarMain2Vol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.TrackBarMain2Vol.AutoSize = false;
+			this.TrackBarMain2Vol.LargeChange = 10;
+			this.TrackBarMain2Vol.Location = new System.Drawing.Point(5, 151);
+			this.TrackBarMain2Vol.Maximum = 100;
+			this.TrackBarMain2Vol.Name = "TrackBarMain2Vol";
+			this.TrackBarMain2Vol.Size = new System.Drawing.Size(104, 20);
+			this.TrackBarMain2Vol.TabIndex = 3;
+			this.TrackBarMain2Vol.TickStyle = System.Windows.Forms.TickStyle.None;
+			this.TrackBarMain2Vol.ValueChanged += new System.EventHandler(this.TrackBarMain2Vol_ValueChanged);
+			// 
 			// FormMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -120,7 +152,9 @@
 			this.PanelMain2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.VLCMain2)).EndInit();
 			this.PanelMain1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.TrackBarMain1Vol)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.VLCMain1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.TrackBarMain2Vol)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -132,6 +166,8 @@
 		private Vlc.DotNet.Forms.VlcControl VLCMain2;
 		private System.Windows.Forms.Panel PanelMain1;
 		private Vlc.DotNet.Forms.VlcControl VLCMain1;
+		private System.Windows.Forms.TrackBar TrackBarMain1Vol;
+		private System.Windows.Forms.TrackBar TrackBarMain2Vol;
 	}
 }
 
